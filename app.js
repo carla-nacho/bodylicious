@@ -58,7 +58,7 @@ hbs.registerHelper('ifUndefined', (value, options) => {
 })
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator'
+app.locals.title = 'Gord-Api'
 
 // Enable authentication using session + passport
 app.use(
@@ -80,5 +80,8 @@ app.use('/', authRoutes)
 
 const diaryRoutes = require('./routes/diary')
 app.use('/diary', diaryRoutes)
+
+const accountRoutes = require('./routes/account')
+app.use('/account', accountRoutes)
 
 module.exports = app
