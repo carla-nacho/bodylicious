@@ -78,4 +78,7 @@ app.use('/', index)
 const authRoutes = require('./routes/auth')
 app.use('/', authRoutes)
 
+const diaryRoutes = require('./routes/diary')
+app.use('/diary', diaryRoutes)
+
 module.exports = app
