@@ -8,10 +8,22 @@ const userSchema = new Schema(
 		gender: { type: String, enum: ['male', 'female'] },
 		email: String,
 		age: Number,
-		calories: Number,
-		proteins: Number,
-		carbohydrates: Number,
-		fats: Number
+		calories: {
+			type: Number,
+			default: 0
+		},
+		proteins: {
+			type: Number,
+			default: 0
+		},
+		carbohydrates: {
+			type: Number,
+			default: 0
+		},
+		fats: {
+			type: Number,
+			default: 0
+		}
 	},
 	{
 		timestamps: {

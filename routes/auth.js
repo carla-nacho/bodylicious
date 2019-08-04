@@ -36,7 +36,7 @@ router.post('/signup', (req, res, next) => {
 	const fats = req.body.fats
 	const carbohydrates = req.body.carbohydrates
 	if (username === '' || password === '' || email === '' || gender === '') {
-		res.render('auth/signup', { message: 'Indicate username,password,email and gender' })
+		res.render('auth/signup', { message: 'Please fill out all fields' })
 		return
 	}
 
@@ -54,7 +54,11 @@ router.post('/signup', (req, res, next) => {
 			password: hashPass,
 			email,
 			age,
-			gender
+			gender,
+			calories,
+			proteins,
+			fats,
+			carbohydrates
 		})
 
 		newUser
