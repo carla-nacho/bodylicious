@@ -11,6 +11,23 @@
         <label for="password">Password</label>
         <input id="password" type="password" name="password" placeholder="Your password" class="form-control">
         <br>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Your email" class="form-control">
+        <br>
+
+        <label for="gender">Gender</label>
+        <select id="gender" type="text" name="gender" placeholder="Your gender" class="form-control">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <br>
+
+        <label for="age">Age</label>
+        <input id="age" type="number" name="age" placeholder="Your age" class="form-control">
+        <br>
+
+
         {{#if message }}
         <div class="error-message">{{ message }}</div>
         {{/if}}
