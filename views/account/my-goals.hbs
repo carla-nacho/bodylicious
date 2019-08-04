@@ -1,1 +1,29 @@
-<h1>My Goals</h1>
+<div class="container">
+  <h1>My Goals</h1>
+  <form action="/account/my-goals" method="POST" id="form-container">
+    <label for="calories">Calories</label>
+    <input id="calories" type="number" name="calories" placeholder="Calories" class="form-control">
+
+    <br>
+
+    <label for="carbohydrates">Carbohydrates</label>
+    <input id="carbohydrates" type="number" name="carbohydrates" placeholder="Carbohydrates in grams"
+      class="form-control">
+    <br>
+
+    <label for="proteins">Proteins</label>
+    <input id="proteins" type="number" name="proteins" placeholder="Proteins in grams" class="form-control">
+    <br>
+
+    <label for="fats">Fats</label>
+    <input id="fats" type="number" name="fatsfats" placeholder="Fats in grams" class="form-control">
+    <br>
+    {{#if message }}
+    <div class="error-message">{{ message }}</div>
+    {{/if}}
+
+    <br>
+
+    <button class="btn btn-dark">Update your goals</button>
+  </form>
+</div>
