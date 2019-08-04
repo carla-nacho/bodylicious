@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login')
+//const nutrientsAPI = new APIHandler('https://api.nal.usda.gov/ndb')
 
 /* GET home page */
 router.get('/', ensureLoggedIn(), (req, res, next) => {

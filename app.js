@@ -8,6 +8,7 @@ const hbs = require('hbs')
 const mongoose = require('mongoose')
 const logger = require('morgan')
 const path = require('path')
+//const nutrientsAPI = new APIHandler('https://api.nal.usda.gov/ndb')
 
 const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
