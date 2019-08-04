@@ -7,7 +7,11 @@ const userSchema = new Schema(
 		password: String,
 		gender: { type: String, enum: ['male', 'female'] },
 		email: String,
-		age: Number
+		age: Number,
+		calories: Number,
+		proteins: Number,
+		carbohydrates: Number,
+		fats: Number
 	},
 	{
 		timestamps: {

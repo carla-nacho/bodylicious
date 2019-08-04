@@ -31,6 +31,10 @@ router.post('/signup', (req, res, next) => {
 	const email = req.body.email
 	const age = req.body.age
 	const gender = req.body.gender
+	const calories = req.body.calories
+	const proteins = req.body.proteins
+	const fats = req.body.fats
+	const carbohydrates = req.body.carbohydrates
 	if (username === '' || password === '' || email === '' || gender === '') {
 		res.render('auth/signup', { message: 'Indicate username,password,email and gender' })
 		return
