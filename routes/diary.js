@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login')
-//const nutrientsAPI = new APIHandler('https://api.nal.usda.gov/ndb')
 const Meal = require('../models/Meal')
+const API = require('../APIHandler')
 
 /* GET home page */
 router.get('/', ensureLoggedIn(), (req, res, next) => {
@@ -14,12 +14,10 @@ router.get('/add', ensureLoggedIn(), (req, res, next) => {
 })
 
 router.post('/add', ensureLoggedIn(), (req, res, next) => {
-	res.render('diary/add-food')
-	// const { type, food} = req.body
-
-	// Meal.create({ type,food})
-	// .then(() => res.redirect('/'))
-	// .catch(err => console.log('Hubo un error:', err))
+	const foods = API.getFullList(req.body.foodSearch)
+	API.getFullList(req.body.foodSearch)
+		.then(data => res.render('diary/add-food', { foods: data }))
+		.catch(err => console.log(err))
 })
 
 module.exports = router
