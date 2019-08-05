@@ -7,10 +7,10 @@
   <!-- Search form -->
   <form action="/diary/add" method="post">
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Buscar comida" aria-label="Buscar comida"
+      <input type="text" class="form-control" placeholder="Search foods" aria-label="Buscar comida"
         aria-describedby="basic-addon2" name="foodSearch" id="foodSearch">
       <div class="input-group-append">
-        <button class="btn btn-dark">Buscar</button>
+        <button class="btn btn-dark">Search</button>
       </div>
     </div>
   </form>
@@ -18,18 +18,30 @@
   <table class="table table-sm">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">Id</th>
         <th scope="col">Name</th>
         <th scope="col">Quantity in grams</th>
+        <th scope="col">Meal</th>
       </tr>
     </thead>
     <tbody>
       {{#each foods}}
-      <tr>
-        <th scope="row"><input type="checkbox" name="check" id="check">{{ndbno}}</th>
-        <td>{{name}}</td>
-        <td><input type="number" value="0"></td>
-      </tr>
+      <form action="/diary/add/meal" method="post">
+        <tr>
+          <td scope="row"><input id="foodId" name="foodId" type="text" class="list-btn" value="{{ndbno}}" readonly>
+          </td>
+          <td><button class="list-btn">{{name}}</button></td>
+          <td><input type="number" value="0" id="quantity" name="quantity"></td>
+          <td>
+            <select name="meals" id="meals">
+              <option value="Breakfast">Breakfast</option>
+              <option value="Lunch">Lunch</option>
+              <option value="Dinner">Dinner</option>
+              <option value="Snacks">Snacks</option>
+            </select>
+          </td>
+        </tr>
+      </form>
       {{/each}}
     </tbody>
   </table>

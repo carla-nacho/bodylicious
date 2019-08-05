@@ -10,4 +10,8 @@ a {
 ul {
   list-style: none; }
 
+.list-btn {
+  border: 0px;
+  background: white; }
+
 /*# sourceMappingURL=style.css.map */

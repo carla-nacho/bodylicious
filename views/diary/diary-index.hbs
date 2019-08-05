@@ -11,33 +11,24 @@
     </div>
 
   </div>
-</div>
 
-<hr>
+  <hr>
+  <h5>Breakfast</h5>
 
-
-<div class='row'>
-  <div class='col-3'>
-    <h5>Breakfast</h5>
-    <a href='#'>Add food</a>
-  </div>
-
-  <div class='col-3'>
-    <h5>Lunch</h5>
-    <a href='#'>Add food</a>
-  </div>
-
-  <div class='col-3'>
-    <h5>Dinner</h5>
-    <a href='#'>Add food</a>
-  </div>
-
-  <div class='col-3'>
-    <h5>Snacks</h5>
-    <a href='#'>Add food</a>
-  </div>
-
+  <p>{{prueba.foodName}}</p>
+  {{#each prueba.foodNutrients}}
+  <p>{{name}}</p>
+  <p>{{value}}</p>
+  {{/each}}
+  <a href='/diary/add'>Add food</a>
+  <h5>Lunch</h5>
+  <a href='/diary/add'>Add food</a>
+  <h5>Dinner</h5>
+  <a href='/diary/add'>Add food</a>
+  <h5>Snacks</h5>
+  <a href='/diary/add'>Add food</a>
 </div>
 
 
+</div>
 </div>

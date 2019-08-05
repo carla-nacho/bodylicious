@@ -3,10 +3,14 @@ const Schema = mongoose.Schema
 
 const mealSchema = new Schema(
 	{
-		type: { type: String, enum: ['Breakfast', 'Lunch', 'Dinner', 'Snack'] },
-		food: {
-			type: Array,
+		mealType: { type: String, enum: ['Breakfast', 'Lunch', 'Dinner', 'Snacks'] },
+		foods: {
+			type: [],
 			default: []
+		},
+		user: {
+			type: Schema.Types.ObjectId,
+			ref: 'User'
 		}
 	},
 	{
