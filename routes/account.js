@@ -19,7 +19,11 @@ router.get('/my-goals', ensureLoggedIn(), (req, res, next) => {
 })
 
 router.post('/my-goals', ensureLoggedIn(), (req, res, next) => {
-	res.render('account/my-goals')
+	const userId = req.user.id
+	const { calories, carbohydrates, proteins, fats } = req.body
+	User.findByIdAndUpdate(userId, { $set: { calories, carbohydrates, proteins, fats } })
+		.then(() => res.redirect('/account'))
+		.catch(err => console.log('Ha habido un error: ', err))
 })
 
 module.exports = router

@@ -4,7 +4,7 @@ const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login')
 
 /* GET home page */
 router.get('/', ensureLoggedOut(), (req, res, next) => {
-	res.redirect('/login')
+	res.render('index')
 })
 
 module.exports = router
