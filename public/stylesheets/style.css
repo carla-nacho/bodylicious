@@ -1,13 +1,9 @@
 body {
-  font: 14px sans-serif; }
-
-main {
-  padding: 40px 0; }
+	font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
 
 a {
-  color: #00b7ff; }
-
-ul {
-  list-style: none; }
+	color: #00b7ff;
+}
 
 /*# sourceMappingURL=style.css.map */
