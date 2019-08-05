@@ -1,4 +1,5 @@
 const axios = require('axios')
+const Meal = require('./models/Meal')
 
 class APIHandler {
 	constructor(baseUrl) {
@@ -25,6 +26,18 @@ class APIHandler {
 					elm => elm.nutrient_id == 203 || elm.nutrient_id == 204 || elm.nutrient_id == 205 || elm.nutrient_id == 208
 				)
 				return { foodName, foodNutrients }
+			})
+			.catch(err => console.log(err))
+	}
+
+	getMeals(id) {
+		return Meal.find({ user: `${id}` })
+			.then(allMeals => {
+				const breakfast = allMeals.filter(elm => elm.mealType == 'Breakfast')
+				const snacks = allMeals.filter(elm => elm.mealType == 'Snacks')
+				const lunch = allMeals.filter(elm => elm.mealType == 'Lunch')
+				const dinner = allMeals.filter(elm => elm.mealType == 'Dinner')
+				return { breakfast, snacks, lunch, dinner }
 			})
 			.catch(err => console.log(err))
 	}
