@@ -1,31 +1,38 @@
 body {
-  font-size: 14px;
-  font-family: 'Roboto', sans-serif; }
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+}
 
 main {
-  padding: 40px 0; }
+	padding: 40px 0;
+}
 
 h1,
 h2 {
-  font-weight: 100; }
+	font-weight: 100;
+}
 
 a {
-  color: #253241; }
+	color: #00b7ff;
+}
 
 ul {
-  list-style: none; }
+	list-style: none;
+}
 
 .list-btn {
-  border: 0px;
-  background: white; }
+	border: 0px;
+	background: white;
+}
 
 #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -100;
-  filter: grayscale(100%); }
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -100;
+	filter: grayscale(100%);
+}
 
 /*# sourceMappingURL=style.css.map */
