@@ -59,7 +59,7 @@ hbs.registerHelper('ifUndefined', (value, options) => {
 })
 
 // default value for title local
-app.locals.title = 'Gord-Api'
+app.locals.title = 'Bodylicious'
 
 // Enable authentication using session + passport
 app.use(
