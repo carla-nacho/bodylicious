@@ -19,7 +19,6 @@ router.get('/add', ensureLoggedIn(), (req, res, next) => {
 })
 
 router.post('/add', ensureLoggedIn(), (req, res, next) => {
-	const foods = API.getFullList(req.body.foodSearch)
 	API.getFullList(req.body.foodSearch)
 		.then(data => res.render('diary/add-food', { foods: data }))
 		.catch(err => console.log(err))
