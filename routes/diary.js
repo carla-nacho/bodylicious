@@ -6,7 +6,10 @@ const API = require('../APIHandler')
 
 /* GET home page */
 router.get('/', ensureLoggedIn(), (req, res, next) => {
-	API.getMeals(req.user.id)
+	let today = new Date()
+	today.setHours(0, 0, 0)
+	console.log(today)
+	API.getMeals(req.user.id, today)
 		.then(meals => {
 			res.render('diary/diary-index', { meals })
 		})
