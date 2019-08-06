@@ -16,8 +16,8 @@ const doughnutChart = (id, height) => {
 						document.getElementById('fats').value,
 						document.getElementById('carbohydrates').value
 					],
-					borderColor: ['rgba(0, 50, 250, .7)', 'rgba(0, 250, 50, .7)', 'rgba(255, 255, 0, .7)'],
-					backgroundColor: ['rgba(0, 50, 250, .2)', 'rgba(0, 250, 50, .2)', 'rgba(255, 255, 0, .2)']
+					// borderColor: ['rgba(0, 50, 250, .7)', 'rgba(0, 250, 50, .7)', 'rgba(255, 255, 0, .7)'],
+					backgroundColor: ['rgba(79,202,184, 1)', 'rgba(243,102,117,1)', 'rgba(115,107,250,1)']
 				}
 			]
 		},

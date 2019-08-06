@@ -1,16 +1,20 @@
 body {
   font-size: 14px;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background-color: white; }
 
 main {
   padding: 40px 0; }
 
 h1,
-h2 {
-  font-weight: 100; }
+h2,
+h4,
+h5 {
+  font-weight: 300; }
 
 a {
-  color: #00b7ff; }
+  color: black; }
 
 ul {
   list-style: none; }
@@ -19,8 +23,16 @@ ul {
   border: 0px;
   background: white; }
 
+<<<<<<< HEAD
 .display-none {
   display: none; }
+=======
+.nav-background {
+  background-color: #253241; }
+
+.nav2-background {
+  background-color: #e8e8e8; }
+>>>>>>> e8bc020e235cacec7aedb2a1672731ad19219249
 
 #myVideo {
   position: fixed;
