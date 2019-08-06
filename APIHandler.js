@@ -33,11 +33,55 @@ class APIHandler {
 	getMeals(id) {
 		return Meal.find({ user: `${id}` })
 			.then(allMeals => {
-				const breakfast = allMeals.filter(elm => elm.mealType == 'Breakfast')
-				const snacks = allMeals.filter(elm => elm.mealType == 'Snacks')
-				const lunch = allMeals.filter(elm => elm.mealType == 'Lunch')
-				const dinner = allMeals.filter(elm => elm.mealType == 'Dinner')
-				return { breakfast, snacks, lunch, dinner }
+				const auxBreakfast = allMeals.filter(elm => elm.mealType == 'Breakfast')
+				const auxSnacks = allMeals.filter(elm => elm.mealType == 'Snacks')
+				const auxLunch = allMeals.filter(elm => elm.mealType == 'Lunch')
+				const auxDinner = allMeals.filter(elm => elm.mealType == 'Dinner')
+				let breakfast = []
+				let snacks = []
+				let lunch = []
+				let dinner = []
+
+				const primerArr = auxBreakfast.map(elm => {
+					return this.getFoodDetails(elm.foods[0].id)
+						.then(details => {
+							breakfast.push(details)
+							return details
+						})
+						.catch(err => console.log(err))
+				})
+
+				const secondArr = auxSnacks.map(elm => {
+					return this.getFoodDetails(elm.foods[0].id)
+						.then(details => {
+							snacks.push(details)
+							return details
+						})
+						.catch(err => console.log(err))
+				})
+				const thirdArr = auxLunch.map(elm => {
+					return this.getFoodDetails(elm.foods[0].id)
+						.then(details => {
+							lunch.push(details)
+							return details
+						})
+						.catch(err => console.log(err))
+				})
+				const fourthArr = auxDinner.map(elm => {
+					return this.getFoodDetails(elm.foods[0].id)
+						.then(details => {
+							dinner.push(details)
+							return details
+						})
+						.catch(err => console.log(err))
+				})
+				const promises = [...primerArr, ...secondArr, ...thirdArr, ...fourthArr]
+
+				return Promise.all(promises)
+					.then(res => {
+						return { breakfast, snacks, lunch, dinner }
+					})
+					.catch(err => console.log(err))
 			})
 			.catch(err => console.log(err))
 	}

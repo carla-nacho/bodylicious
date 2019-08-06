@@ -14,17 +14,26 @@
 
   <hr>
   <h5>Breakfast</h5>
-  <p>{{meals.breakfast}}</p>
+  {{#each meals.breakfast}}
+  <p>{{foodName}}</p>
+  {{/each}}
   <a href='/diary/add'>Add food</a>
   <h5>Lunch</h5>
+  {{#each meals.lunch}}
+  <p>{{foodName}}</p>
+  {{/each}}
   <a href='/diary/add'>Add food</a>
   <h5>Dinner</h5>
+  {{#each meals.dinner}}
+  <p>{{foodName}}</p>
+  {{/each}}
   <a href='/diary/add'>Add food</a>
   <h5>Snacks</h5>
   {{#each meals.snacks}}
-  <p>{{foods.0.id}}</p>
+  <p>{{foodName}}</p>
   {{/each}}
   <a href='/diary/add'>Add food</a>
+
 </div>
 
 

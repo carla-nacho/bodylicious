@@ -8,18 +8,10 @@ const API = require('../APIHandler')
 router.get('/', ensureLoggedIn(), (req, res, next) => {
 	API.getMeals(req.user.id)
 		.then(meals => {
-			meals.snacks.forEach(elm => {
-				console.log(elm.foods[0].id)
-			})
+			console.log(meals)
+			res.render('diary/diary-index', { meals })
 		})
 		.catch(err => console.log(err))
-	// API.getFoodDetails(45044297)
-	// 	.then(prueba =>
-	// 		Meal.find({ user: `${req.user.id}` })
-	// 			.then(allMeals => res.render('diary/diary-index', { prueba }))
-	// 			.catch(err => console.log(err))
-	// 	)
-	// 	.catch(err => console.log(err))
 })
 
 router.get('/add', ensureLoggedIn(), (req, res, next) => {
