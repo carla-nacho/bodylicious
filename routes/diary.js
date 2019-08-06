@@ -8,7 +8,6 @@ const API = require('../APIHandler')
 router.get('/', ensureLoggedIn(), (req, res, next) => {
 	API.getMeals(req.user.id)
 		.then(meals => {
-			console.log(meals)
 			res.render('diary/diary-index', { meals })
 		})
 		.catch(err => console.log(err))

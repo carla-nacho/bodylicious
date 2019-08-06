@@ -1,36 +1,57 @@
 <div class="container">
   <h2>Food Diary</h2>
-
   <div class='row'>
     <div clas='col-6'>
       <h4>Your Food Diary for:</h4>
     </div>
-
     <div clas='col-6'>
       <span class="btn btn-dark">{{date}}</span>
     </div>
-
   </div>
-
   <hr>
+
+
+
   <h5>Breakfast</h5>
   {{#each meals.breakfast}}
   <p>{{foodName}}</p>
+  <p>Calories: {{foodNutrients.0.value}} Proteins: {{foodNutrients.1.value}} Fats: {{foodNutrients.2.value}}
+    Carbohydrates: {{foodNutrients.3.value}}</p>
   {{/each}}
   <a href='/diary/add'>Add food</a>
+
+
   <h5>Lunch</h5>
   {{#each meals.lunch}}
   <p>{{foodName}}</p>
+  <p>Calories: {{foodNutrients.0.value}} Proteins: {{foodNutrients.1.value}} Fats: {{foodNutrients.2.value}}
+    Carbohydrates: {{foodNutrients.3.value}}</p>
+
+
   {{/each}}
   <a href='/diary/add'>Add food</a>
+
+
+
+
   <h5>Dinner</h5>
   {{#each meals.dinner}}
   <p>{{foodName}}</p>
+  <p>Calories: {{foodNutrients.0.value}} Proteins: {{foodNutrients.1.value}} Fats: {{foodNutrients.2.value}}
+    Carbohydrates: {{foodNutrients.3.value}}</p>
   {{/each}}
   <a href='/diary/add'>Add food</a>
+
+
+
+
+
+
   <h5>Snacks</h5>
   {{#each meals.snacks}}
   <p>{{foodName}}</p>
+  <p>Calories: {{foodNutrients.0.value}} Proteins: {{foodNutrients.1.value}} Fats: {{foodNutrients.2.value}}
+    Carbohydrates: {{foodNutrients.3.value}}</p>
   {{/each}}
   <a href='/diary/add'>Add food</a>
 
