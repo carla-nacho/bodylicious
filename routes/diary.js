@@ -12,6 +12,14 @@ router.get('/', ensureLoggedIn(), (req, res, next) => {
 		})
 		.catch(err => console.log(err))
 })
+router.post('/', ensureLoggedIn(), (req, res, next) => {
+	const date = new Date(req.body.date)
+	API.getMeals(req.user.id, date)
+		.then(meals => {
+			res.render('diary/diary-index', { meals })
+		})
+		.catch(err => console.log(err))
+})
 
 router.get('/add', ensureLoggedIn(), (req, res, next) => {
 	res.render('diary/add-food')

@@ -36,8 +36,9 @@ class APIHandler {
 			.catch(err => console.log(err))
 	}
 
-	getMeals(id) {
-		return Meal.find({ user: `${id}` })
+	getMeals(id, today) {
+		const tomorrow = new Date(today.getTime() + 24 * 60 * 60 * 1000)
+		return Meal.find({ $and: [{ created_at: { $gte: today, $lt: tomorrow } }, { user: `${id}` }] })
 			.then(allMeals => {
 				const auxBreakfast = allMeals.filter(elm => elm.mealType == 'Breakfast')
 				const auxSnacks = allMeals.filter(elm => elm.mealType == 'Snacks')

@@ -5,7 +5,10 @@
       <h4>Your Food Diary for:</h4>
     </div>
     <div clas='col-6'>
-      <span class="btn btn-dark">{{date}}</span>
+      <form action="/diary" method="post">
+        <input type="date" name="date" id="date">
+        <button class="btn btn-dark">Update</button>
+      </form>
     </div>
   </div>
   <hr>
