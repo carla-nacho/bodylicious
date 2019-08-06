@@ -19,6 +19,9 @@ ul {
   border: 0px;
   background: white; }
 
+.display-none {
+  display: none; }
+
 #myVideo {
   position: fixed;
   right: 0;
