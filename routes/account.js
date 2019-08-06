@@ -22,7 +22,7 @@ router.post('/my-goals', ensureLoggedIn(), (req, res, next) => {
 	const userId = req.user.id
 	const { calories, carbohydrates, proteins, fats } = req.body
 	User.findByIdAndUpdate(userId, { $set: { calories, carbohydrates, proteins, fats } })
-		.then(() => res.redirect('/account'))
+		.then(() => res.redirect('/account/my-goals'))
 		.catch(err => console.log('Ha habido un error: ', err))
 })
 
