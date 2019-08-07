@@ -2,8 +2,8 @@ body {
 	font-size: 14px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
-	// background: white url('/images/foodBG.jpg') no-repeat fixed center;
-	// background-size: cover;
+	background: white url('/images/foodBG.jpg') no-repeat fixed center;
+	background-size: cover;
 }
 
 main {
@@ -23,6 +23,24 @@ a {
 
 ul {
 	list-style: none;
+}
+
+.center {
+	position: absolute;
+	top: 40%;
+	left: 37%;
+	color: white;
+	justify-content: center;
+}
+
+.move {
+	margin-left: 95px;
+}
+
+.title {
+	font-size: 6em;
+	margin: 10px 0;
+	text-align: center;
 }
 
 .list-btn {
@@ -45,7 +63,24 @@ ul {
 .td {
 	background-color: transparent;
 }
+.navbar-dark .navbar-brand {
+	color: #352b25;
+}
 
+.collapse .navbar-collapse {
+	color: #352b25;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #352b25;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #352b25;
+}
+.navbar-link {
+	color: #352b25;
+}
 .logo {
 	width: 200px;
 	height: 150px;
