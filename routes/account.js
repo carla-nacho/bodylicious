@@ -42,14 +42,17 @@ router.get('/', ensureLoggedIn(), (req, res, next) => {
 			const objectiveProtein = ((objectiveCalories * req.user.proteins) / 400).toFixed()
 			const consumedProteins = total[1].toFixed()
 			const leftProteins = objectiveProtein - consumedProteins
+			const percentageProtein = (consumedProteins * 100) / objectiveProtein
 
 			const objectiveFats = ((objectiveCalories * req.user.fats) / 900).toFixed()
 			const consumedFats = total[2].toFixed()
 			const leftFats = objectiveFats - consumedFats
+			const percentageFats = (consumedFats * 100) / objectiveFats
 
 			const objectiveCarbs = ((objectiveCalories * req.user.carbohydrates) / 400).toFixed()
 			const consumedCarbs = total[3].toFixed()
 			const leftCarbs = objectiveCarbs - consumedCarbs
+			const percentageCarbs = (consumedCarbs * 100) / objectiveCarbs
 
 			const data = {
 				objectiveCalories,
@@ -58,12 +61,15 @@ router.get('/', ensureLoggedIn(), (req, res, next) => {
 				objectiveProtein,
 				consumedProteins,
 				leftProteins,
+				percentageProtein,
 				objectiveFats,
 				consumedFats,
 				leftFats,
+				percentageFats,
 				objectiveCarbs,
 				consumedCarbs,
-				leftCarbs
+				leftCarbs,
+				percentageCarbs
 			}
 
 			console.log(data)

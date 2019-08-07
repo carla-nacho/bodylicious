@@ -2,8 +2,8 @@ body {
 	font-size: 14px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
-	background: white url('/images/foodBG.jpg') no-repeat fixed center;
-	background-size: cover;
+	// background: white url('/images/foodBG.jpg') no-repeat fixed center;
+	// background-size: cover;
 }
 
 main {
@@ -49,4 +49,30 @@ ul {
 	min-height: 100%;
 	z-index: -100;
 	filter: grayscale(100%);
+}
+
+.bg-bar-protein {
+	background-color: rgba(79, 202, 184, 1);
+}
+
+.bg-bar-fats {
+	background-color: rgba(243, 102, 117, 1);
+}
+
+.bg-bar-carbs {
+	background-color: rgba(115, 107, 250, 1);
+}
+
+.progress-bar {
+	width: 0;
+	animation: progress 1.5s ease-in-out forwards;
+}
+
+@keyframes progress {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
 }
