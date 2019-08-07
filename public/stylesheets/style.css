@@ -20,16 +20,23 @@ ul {
 
 .list-btn {
   border: 0px;
-  background: white; }
+  background: transparent; }
 
 .display-none {
   display: none; }
 
 .nav-background {
-  background-color: #253241; }
+  background-color: transparent; }
 
 .nav2-background {
-  background-color: #e8e8e8; }
+  background-color: transparent; }
+
+.td {
+  background-color: transparent; }
+
+.logo {
+  width: 200px;
+  height: 150px; }
 
 #myVideo {
   position: fixed;
