@@ -1,145 +1,116 @@
 body {
-	font-size: 14px;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-	background: white url('/images/foodBG.jpg') no-repeat fixed center;
-	background-size: cover;
-}
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  background: white url("/images/foodBG.jpg") no-repeat fixed center;
+  background-size: cover; }
 
 main {
-	padding: 40px 0;
-}
+  padding: 40px 0; }
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-	font-weight: 300;
-}
+  font-weight: 300; }
 
 a {
-	color: black;
-}
+  color: black; }
 
 ul {
-	list-style: none;
-}
+  list-style: none; }
 
 .btn {
-	margin: 10px 0;
-}
+  margin: 10px 0; }
+
 .center {
-	position: absolute;
-	top: 40%;
-	left: 37%;
-	color: white;
-	justify-content: center;
-}
+  position: absolute;
+  top: 40%;
+  left: 37%;
+  color: white;
+  justify-content: center; }
 
 .move {
-	margin-left: 95px;
-}
+  margin-left: 95px; }
 
 .title {
-	font-size: 6em;
-	margin: 10px 0;
-	text-align: center;
-}
+  font-size: 6em;
+  margin: 10px 0;
+  text-align: center; }
 
 .list-btn {
-	border: 0px;
-	background: transparent;
-}
+  border: 0px;
+  background: transparent; }
 
 .display-none {
-	display: none;
-}
+  display: none; }
 
 .nav-background {
-	background-color: transparent;
-}
+  background-color: transparent; }
 
 .nav2-background {
-	background-color: transparent;
-}
+  background-color: transparent; }
 
 .td {
-	background-color: transparent;
-}
+  background-color: transparent; }
 
 .navbar-dark .navbar-brand {
-	color: #352b25;
-}
+  color: #352b25; }
 
 .collapse .navbar-collapse {
-	color: #352b25;
-}
+  color: #352b25; }
 
 .navbar-light .navbar-nav .nav-link {
-	color: #352b25;
-}
+  color: #352b25; }
 
 .navbar-dark .navbar-nav .nav-link {
-	color: #352b25;
-}
+  color: #352b25; }
 
 .navbar-link {
-	color: #352b25;
-}
+  color: #352b25; }
 
 .logo {
-	width: 200px;
-	height: 150px;
-}
+  width: 200px;
+  height: 150px; }
 
 #myVideo {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
-	z-index: -100;
-	filter: grayscale(100%);
-}
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  filter: grayscale(100%); }
 
 .bg-bar-protein {
-	background-color: #4fcab8;
-}
+  background-color: #4fcab8; }
 
 .bg-bar-fats {
-	background-color: #f36675;
-}
+  background-color: #f36675; }
 
 .bg-bar-carbs {
-	background-color: #736bfa;
-}
+  background-color: #736bfa; }
 
 .progress-bar {
-	width: 0;
-	animation: progress 1.5s ease-in-out forwards;
-}
+  width: 0;
+  animation: progress 1.5s ease-in-out forwards; }
 
 .profile-pic {
-	border-radius: 100%;
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	object-position: top;
-}
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top; }
 
 .format-normal {
-	font-size: 14px;
-	font-weight: 300;
-}
+  font-size: 14px;
+  font-weight: 300; }
 
 @keyframes progress {
-	from {
-		width: 0;
-	}
-	to {
-		width: 100%;
-	}
-}
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
