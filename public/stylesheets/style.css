@@ -23,16 +23,14 @@ ul {
   border: 0px;
   background: white; }
 
-<<<<<<< HEAD
 .display-none {
   display: none; }
-=======
+
 .nav-background {
   background-color: #253241; }
 
 .nav2-background {
   background-color: #e8e8e8; }
->>>>>>> e8bc020e235cacec7aedb2a1672731ad19219249
 
 #myVideo {
   position: fixed;
