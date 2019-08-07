@@ -8,6 +8,7 @@ const userSchema = new Schema(
 		gender: { type: String, enum: ['male', 'female'] },
 		email: String,
 		age: Number,
+		imgPath: String,
 		calories: {
 			type: Number,
 			default: 0

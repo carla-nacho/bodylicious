@@ -4,42 +4,48 @@
     <div class="col-md-6">
       <h2>My Account</h2>
       <hr>
-      <ul>
-        <li>Username: {{username}}</li>
-        <br>
-        <li>E-Mail: {{email}}</li>
-        <br>
-        <li>Age: {{age}}</li>
-        <br>
-        <li>Gender: {{gender}}</li>
-      </ul>
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="{{imgPath}}" alt="Foto de perfil" class="profile-pic">
+        </div>
+        <div class="col-sm-8">
+          <ul>
+            <li>Username: {{username}}</li>
+            <br>
+            <li>E-Mail: {{email}}</li>
+            <br>
+            <li>Age: {{age}}</li>
+            <br>
+            <li>Gender: {{gender}}</li>
+          </ul>
+        </div>
+      </div>
       <a href="#" class="btn btn-dark">Edit</a>
     </div>
     {{/with}}
     <div class="col-md-6">
       <h2>Your daily summary</h2>
       <hr>
-      <h3>{{data.leftCalories}}</h3>
-      <span>Left calories</span>
+      <h3>{{data.leftCalories}} <span class="format-normal">Calories left</span></h3>
       <p>Objective calories: {{data.objectiveCalories}}</p>
       <p>Left proteins: {{data.leftProteins}}g</p>
       <div class="progress">
-        <div class="progress-bar bg-bar-protein" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="2000"
-          style="max-width:{{data.percentageProtein}}%">
+        <div class="progress-bar bg-bar-protein" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+          aria-valuemax="2000" style="max-width:{{data.percentageProtein}}%">
           <span class="sr-only">60% Complete</span>
         </div>
       </div>
       <p>Left fats: {{data.leftFats}}g</p>
       <div class="progress">
-        <div class="progress-bar bg-bar-fats" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="2000"
-          style="max-width:{{data.percentageFats}}%">
+        <div class="progress-bar bg-bar-fats" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+          aria-valuemax="2000" style="max-width:{{data.percentageFats}}%">
           <span class="sr-only">60% Complete</span>
         </div>
       </div>
       <p>Left carbs: {{data.leftCarbs}}g</p>
       <div class="progress">
-        <div class="progress-bar bg-bar-carbs" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="2000"
-          style="max-width:{{data.percentageCarbs}}%">
+        <div class="progress-bar bg-bar-carbs" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+          aria-valuemax="2000" style="max-width:{{data.percentageCarbs}}%">
           <span class="sr-only">60% Complete</span>
         </div>
       </div>

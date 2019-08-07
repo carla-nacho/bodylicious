@@ -10,6 +10,7 @@ main {
 
 h1,
 h2,
+h3,
 h4,
 h5 {
   font-weight: 300; }
@@ -19,6 +20,9 @@ a {
 
 ul {
   list-style: none; }
+
+.btn {
+  margin: 10px 0; }
 
 .list-btn {
   border: 0px;
@@ -61,6 +65,17 @@ ul {
 .progress-bar {
   width: 0;
   animation: progress 1.5s ease-in-out forwards; }
+
+.profile-pic {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top; }
+
+.format-normal {
+  font-size: 14px;
+  font-weight: 300; }
 
 @keyframes progress {
   from {

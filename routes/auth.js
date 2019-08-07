@@ -2,6 +2,7 @@ const express = require('express')
 const passport = require('passport')
 const router = express.Router()
 const User = require('../models/User')
+const uploadCloud = require('../configs/cloudinary.config')
 
 // Bcrypt to encrypt passwords
 const bcrypt = require('bcrypt')
@@ -25,13 +26,15 @@ router.get('/signup', (req, res, next) => {
 	res.render('auth/signup')
 })
 
-router.post('/signup', (req, res, next) => {
+router.post('/signup', uploadCloud.single('photo'), (req, res, next) => {
 	const username = req.body.username
 	const password = req.body.password
 	const email = req.body.email
 	const age = req.body.age
 	const gender = req.body.gender
 	const calories = req.body.calories
+	const imgPath = req.file.url
+	console.log(req.file.url)
 	const proteins = req.body.proteins
 	const fats = req.body.fats
 	const carbohydrates = req.body.carbohydrates
@@ -58,7 +61,8 @@ router.post('/signup', (req, res, next) => {
 			calories,
 			proteins,
 			fats,
-			carbohydrates
+			carbohydrates,
+			imgPath
 		})
 
 		newUser

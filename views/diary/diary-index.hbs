@@ -1,56 +1,43 @@
 <div class="container">
   <h2>Food Diary</h2>
-  <div class='row'>
-    <div clas='col-3'>
-      <h4>Your Food Diary for:</h4>
-    </div>
-    <div clas='col-md- 9'>
-      <form action="/diary" method="post">
-        <input type="date" name="date" id="date" class="form-control">
-        <button class="btn btn-dark">Update</button>
-      </form>
-    </div>
-  </div>
-  <hr>
-
-
-
+  <form action="/diary" method="post">
+    <h4>Your Food Diary for:</h4>
+    <input type="date" name="date" id="date" class="form-control">
+    <button class="btn btn-dark">Update</button>
+  </form>
+  <br>
   <h5>Breakfast</h5>
+  <hr>
   {{#each meals.breakfast}}
   <p>{{foodName}}</p>
   <p>Calories: {{foodNutrients.0.value}} Proteins: {{foodNutrients.1.value}} Fats: {{foodNutrients.2.value}}
     Carbohydrates: {{foodNutrients.3.value}}</p>
   {{/each}}
   <a href='/diary/add'>Add food</a>
-
+  <br><br>
 
   <h5>Lunch</h5>
+  <hr>
   {{#each meals.lunch}}
   <p>{{foodName}}</p>
   <p>Calories: {{foodNutrients.0.value}} Proteins: {{foodNutrients.1.value}} Fats: {{foodNutrients.2.value}}
     Carbohydrates: {{foodNutrients.3.value}}</p>
-
-
   {{/each}}
   <a href='/diary/add'>Add food</a>
-
-
-
+  <br><br>
 
   <h5>Dinner</h5>
+  <hr>
   {{#each meals.dinner}}
   <p>{{foodName}}</p>
   <p>Calories: {{foodNutrients.0.value}} Proteins: {{foodNutrients.1.value}} Fats: {{foodNutrients.2.value}}
     Carbohydrates: {{foodNutrients.3.value}}</p>
   {{/each}}
   <a href='/diary/add'>Add food</a>
-
-
-
-
-
+  <br><br>
 
   <h5>Snacks</h5>
+  <hr>
   {{#each meals.snacks}}
   <p>{{foodName}}</p>
   <p>Calories: {{foodNutrients.0.value}} Proteins: {{foodNutrients.1.value}} Fats: {{foodNutrients.2.value}}

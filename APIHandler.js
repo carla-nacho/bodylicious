@@ -23,7 +23,7 @@ class APIHandler {
 			)
 			.then(foodDetails => {
 				let foodName = foodDetails.data.foods[0].food.desc.name
-				foodName = foodName.slice(0, foodName.length - 19)
+				// foodName = foodName.slice(0, foodName.length - 19)
 				const foodNutrients = foodDetails.data.foods[0].food.nutrients.filter(
 					elm => elm.nutrient_id == 203 || elm.nutrient_id == 204 || elm.nutrient_id == 205 || elm.nutrient_id == 208
 				)

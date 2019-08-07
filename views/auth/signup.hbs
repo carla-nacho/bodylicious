@@ -1,33 +1,42 @@
 <div class="container sigunp">
   <div class="row">
     <div class="col-md-12">
-      <form action="/signup" method="POST" id="form-container">
+      <form action="/signup" method="POST" id="form-container" enctype="multipart/form-data">
         <div class="row">
           <div class="col-md-6">
             <h2>Signup</h2>
-            <label for="username">Username</label>
-            <input id="username" type="text" name="username" placeholder="Your username" class="form-control">
-
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input id="username" type="text" name="username" placeholder="Your username" class="form-control">
+            </div>
             <br>
-
-            <label for="password">Password</label>
-            <input id="password" type="password" name="password" placeholder="Your password" class="form-control">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input id="password" type="password" name="password" placeholder="Your password" class="form-control">
+            </div>
             <br>
-
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" placeholder="Your email" class="form-control">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="Your email" class="form-control">
+            </div>
             <br>
-
-            <label for="gender">Gender</label>
-            <select id="gender" type="text" name="gender" placeholder="Your gender" class="form-control">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
+            <div class="form-group">
+              <label for="gender">Gender</label>
+              <select id="gender" type="text" name="gender" placeholder="Your gender" class="form-control">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
             <br>
-
-            <label for="age">Age</label>
-            <input id="age" type="number" name="age" placeholder="Your age" class="form-control">
+            <div class="form-group">
+              <label for="age">Age</label>
+              <input id="age" type="number" name="age" placeholder="Your age" class="form-control">
+            </div>
             <br>
+            <div class="form-group">
+              <label for="imgPath">Image Path</label>
+              <input type="file" name="photo" class="form-control">
+            </div>
           </div>
           <div class="col-md-6">
             <h2>Your goals</h2>
