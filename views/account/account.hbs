@@ -1,6 +1,6 @@
-{{#with user}}
 <div class="container">
   <div class="row">
+    {{#with user}}
     <div class="col-md-6">
       <h2>My Account</h2>
       <hr>
@@ -15,10 +15,17 @@
       </ul>
       <a href="#" class="btn btn-dark">Edit</a>
     </div>
+    {{/with}}
     <div class="col-md-6">
       <h2>Your daily summary</h2>
       <hr>
+      <h3>{{data.leftCalories}}</h3>
+      <span>Left calories</span>
+      <p>Objective calories: {{data.objectiveCalories}}</p>
+      <p>Left proteins: {{data.leftProteins}}g</p>
+      <p>Left fats: {{data.leftFats}}g</p>
+      <p>Left carbs: {{data.leftCarbs}}g</p>
+
     </div>
   </div>
 </div>
-{{/with}}

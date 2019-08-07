@@ -2,13 +2,74 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login')
+const API = require('../APIHandler')
 
 /* GET home page */
 router.get('/', ensureLoggedIn(), (req, res, next) => {
-	const userId = req.user.id
-	User.findById(userId)
-		.then(theWholeUser => res.render('account/account', { user: theWholeUser }))
-		.catch(err => console.log('There was an error: ', err))
+	let today = new Date()
+	today.setHours(0, 0, 0)
+	API.getMeals(req.user.id, today)
+		.then(meals => {
+			let total = [0, 0, 0, 0]
+			for (let i = 0; i < meals.breakfast.length; i++) {
+				total[0] += meals.breakfast[i].foodNutrients[0].value
+				total[1] += meals.breakfast[i].foodNutrients[1].value
+				total[2] += meals.breakfast[i].foodNutrients[2].value
+				total[3] += meals.breakfast[i].foodNutrients[3].value
+			}
+			for (let i = 0; i < meals.lunch.length; i++) {
+				total[0] += meals.lunch[i].foodNutrients[0].value
+				total[1] += meals.lunch[i].foodNutrients[1].value
+				total[2] += meals.lunch[i].foodNutrients[2].value
+				total[3] += meals.lunch[i].foodNutrients[3].value
+			}
+			for (let i = 0; i < meals.dinner.length; i++) {
+				total[0] += meals.dinner[i].foodNutrients[0].value
+				total[1] += meals.dinner[i].foodNutrients[1].value
+				total[2] += meals.dinner[i].foodNutrients[2].value
+				total[3] += meals.dinner[i].foodNutrients[3].value
+			}
+			for (let i = 0; i < meals.snacks.length; i++) {
+				total[0] += meals.snacks[i].foodNutrients[0].value
+				total[1] += meals.snacks[i].foodNutrients[1].value
+				total[2] += meals.snacks[i].foodNutrients[2].value
+				total[3] += meals.snacks[i].foodNutrients[3].value
+			}
+			const objectiveCalories = req.user.calories.toFixed()
+			const consumedCalories = total[0].toFixed()
+			const leftCalories = objectiveCalories - consumedCalories
+
+			const objectiveProtein = ((objectiveCalories * req.user.proteins) / 400).toFixed()
+			const consumedProteins = total[1].toFixed()
+			const leftProteins = objectiveProtein - consumedProteins
+
+			const objectiveFats = ((objectiveCalories * req.user.fats) / 900).toFixed()
+			const consumedFats = total[2].toFixed()
+			const leftFats = objectiveFats - consumedFats
+
+			const objectiveCarbs = ((objectiveCalories * req.user.carbohydrates) / 400).toFixed()
+			const consumedCarbs = total[3].toFixed()
+			const leftCarbs = objectiveCarbs - consumedCarbs
+
+			const data = {
+				objectiveCalories,
+				consumedCalories,
+				leftCalories,
+				objectiveProtein,
+				consumedProteins,
+				leftProteins,
+				objectiveFats,
+				consumedFats,
+				leftFats,
+				objectiveCarbs,
+				consumedCarbs,
+				leftCarbs
+			}
+
+			console.log(data)
+			res.render('account/account', { user: req.user, data })
+		})
+		.catch(err => console.log(err))
 })
 
 router.get('/my-goals', ensureLoggedIn(), (req, res, next) => {
