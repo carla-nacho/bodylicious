@@ -25,10 +25,10 @@ class APIHandler {
 				const foodNutrients = foodDetails.data.foods[0].food.nutrients.filter(
 					elm => elm.nutrient_id == 203 || elm.nutrient_id == 204 || elm.nutrient_id == 205 || elm.nutrient_id == 208
 				)
-				foodNutrients[0].value = (quantity * foodNutrients[0].value) / 100
-				foodNutrients[1].value = (quantity * foodNutrients[1].value) / 100
-				foodNutrients[2].value = (quantity * foodNutrients[2].value) / 100
-				foodNutrients[3].value = (quantity * foodNutrients[3].value) / 100
+				foodNutrients[0].value = Math.floor((quantity * foodNutrients[0].value) / 100)
+				foodNutrients[1].value = Math.floor((quantity * foodNutrients[1].value) / 100)
+				foodNutrients[2].value = Math.floor((quantity * foodNutrients[2].value) / 100)
+				foodNutrients[3].value = Math.floor((quantity * foodNutrients[3].value) / 100)
 
 				return { foodName, foodNutrients, quantity }
 			})
