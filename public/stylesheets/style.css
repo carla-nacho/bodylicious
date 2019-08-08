@@ -74,6 +74,10 @@ ul {
   width: 200px;
   height: 150px; }
 
+.icons {
+  height: 50px;
+  width: 50px; }
+
 #myVideo {
   position: fixed;
   right: 0;
