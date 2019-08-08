@@ -158,7 +158,8 @@ ul {
 .bg-bn {
   background: white url("/images/foodyByN.jpg") no-repeat fixed center;
   background-size: cover;
-  height: 100vh; }
+  height: 100%;
+  min-height: 100vh; }
 
 .progress-bar {
   width: 0;
