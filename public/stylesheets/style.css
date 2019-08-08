@@ -83,6 +83,9 @@ ul {
   z-index: -100;
   filter: grayscale(100%); }
 
+.bg-bar-calories {
+  background-color: #fcba03; }
+
 .bg-bar-protein {
   background-color: #4fcab8; }
 

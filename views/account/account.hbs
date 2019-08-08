@@ -28,25 +28,30 @@
       <hr>
       <h3>{{data.leftCalories}} <span class="format-normal">Calories left</span></h3>
       <p>Objective calories: {{data.objectiveCalories}}</p>
+      <div class="progress">
+        <div class="progress-bar bg-bar-calories" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+          aria-valuemax="2000" style="max-width:{{data.percentageCalories}}%">
+        </div>
+      </div>
+      <br>
       <p>Left proteins: {{data.leftProteins}}g</p>
       <div class="progress">
         <div class="progress-bar bg-bar-protein" role="progressbar" aria-valuenow="100" aria-valuemin="0"
           aria-valuemax="2000" style="max-width:{{data.percentageProtein}}%">
-          <span class="sr-only">60% Complete</span>
         </div>
       </div>
+      <br>
       <p>Left fats: {{data.leftFats}}g</p>
       <div class="progress">
         <div class="progress-bar bg-bar-fats" role="progressbar" aria-valuenow="100" aria-valuemin="0"
           aria-valuemax="2000" style="max-width:{{data.percentageFats}}%">
-          <span class="sr-only">60% Complete</span>
         </div>
       </div>
+      <br>
       <p>Left carbs: {{data.leftCarbs}}g</p>
       <div class="progress">
         <div class="progress-bar bg-bar-carbs" role="progressbar" aria-valuenow="100" aria-valuemin="0"
           aria-valuemax="2000" style="max-width:{{data.percentageCarbs}}%">
-          <span class="sr-only">60% Complete</span>
         </div>
       </div>
 

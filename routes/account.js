@@ -38,6 +38,7 @@ router.get('/', ensureLoggedIn(), (req, res, next) => {
 			const objectiveCalories = req.user.calories.toFixed()
 			const consumedCalories = total[0].toFixed()
 			const leftCalories = objectiveCalories - consumedCalories
+			const percentageCalories = (consumedCalories * 100) / objectiveCalories
 
 			const objectiveProtein = ((objectiveCalories * req.user.proteins) / 400).toFixed()
 			const consumedProteins = total[1].toFixed()
@@ -58,6 +59,7 @@ router.get('/', ensureLoggedIn(), (req, res, next) => {
 				objectiveCalories,
 				consumedCalories,
 				leftCalories,
+				percentageCalories,
 				objectiveProtein,
 				consumedProteins,
 				leftProteins,
@@ -88,9 +90,16 @@ router.get('/my-goals', ensureLoggedIn(), (req, res, next) => {
 router.post('/my-goals', ensureLoggedIn(), (req, res, next) => {
 	const userId = req.user.id
 	const { calories, carbohydrates, proteins, fats } = req.body
-	User.findByIdAndUpdate(userId, { $set: { calories, carbohydrates, proteins, fats } })
-		.then(() => res.redirect('/account/my-goals'))
-		.catch(err => console.log('Ha habido un error: ', err))
+	console.log(parseInt(proteins) + parseInt(carbohydrates) + parseInt(fats))
+	if (parseInt(proteins) + parseInt(carbohydrates) + parseInt(fats) != 100) {
+		User.findById(userId)
+			.then(theWholeUser => res.render('account/my-goals', { user: theWholeUser, message: 'Your macros must sum 100%' }))
+			.catch(err => console.log('There was an error: ', err))
+	} else {
+		User.findByIdAndUpdate(userId, { $set: { calories, carbohydrates, proteins, fats } })
+			.then(() => res.redirect('/account/my-goals'))
+			.catch(err => console.log('Ha habido un error: ', err))
+	}
 })
 
 module.exports = router

@@ -33,13 +33,17 @@ router.post('/signup', uploadCloud.single('photo'), (req, res, next) => {
 	const age = req.body.age
 	const gender = req.body.gender
 	const calories = req.body.calories
-	const imgPath = req.file.url
-	console.log(req.file.url)
 	const proteins = req.body.proteins
 	const fats = req.body.fats
 	const carbohydrates = req.body.carbohydrates
-	if (username === '' || password === '' || email === '' || gender === '') {
+	if (username === '' || password === '' || email === '' || gender === '' || req.file === undefined) {
 		res.render('auth/signup', { message: 'Please fill out all fields' })
+		return
+	}
+	const imgPath = req.file.url
+
+	if (parseInt(proteins) + parseInt(carbohydrates) + parseInt(fats) != 100) {
+		res.render('auth/signup', { message: 'Your macros must sum 100' })
 		return
 	}
 

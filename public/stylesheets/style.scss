@@ -100,16 +100,20 @@ ul {
 	filter: grayscale(100%);
 }
 
+.bg-bar-calories {
+	background-color: rgb(252, 186, 3);
+}
+
 .bg-bar-protein {
-	background-color: rgba(79, 202, 184, 1);
+	background-color: rgb(79, 202, 184);
 }
 
 .bg-bar-fats {
-	background-color: rgba(243, 102, 117, 1);
+	background-color: rgb(243, 102, 117);
 }
 
 .bg-bar-carbs {
-	background-color: rgba(115, 107, 250, 1);
+	background-color: rgb(115, 107, 250);
 }
 
 .progress-bar {
