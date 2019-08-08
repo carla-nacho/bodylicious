@@ -56,7 +56,7 @@
           <p>Track your meals our food database + tracking tools.<p>
         </div>
       </div>
-
+      <br>
       <div class="row">
         <div class="col-2">
           <img class="icons" src="/images/graph.png">
@@ -65,12 +65,9 @@
         <div class="col-10">
           <h5> SET A GOAL</h5>
           <p>And start making the change you want.</p>
-
-
         </div>
-
       </div>
-
+      <br>
       <div class="row">
         <div class="col-2">
           <img class="icons" src="/images/phone.png">
@@ -78,15 +75,16 @@
 
         <div class="col-10">
           <h5> CONNECT APPS & DEVICES</h5>
-          <p>Connect devices, fitness trackers and apps for seamless activity and biometric tracking.<p>
+          <p>Connect devices, fitness trackers and apps.<p>
         </div>
       </div>
 
     </div>
-    <div class="col-md-8">
-      <h2>Login</h2>
 
-      <form action="/login" method="POST" id="form-container">
+
+    <div class="col-md-8">
+      <h2 class="h2login">Login</h2>
+      <form action="/login" method="POST" id="form-container" class="logintitle">
         <label for="username">Username</label>
         <input id="username" type="text" name="username" placeholder="Your username" class="form-control inputs">
 
@@ -101,7 +99,7 @@
 
         <br><br>
 
-        <button class="btn btn-dark coolbutton">Login</button>
+        <button class="btn btn-dark coolbutton centerlogin">Login</button>
         <small class="account-message form-text text-muted">
           Don't have an account yet?
           <a href="/signup">Signup</a>
