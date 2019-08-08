@@ -1,8 +1,13 @@
 <div class="container">
   <div class="row">
     {{#with user}}
-    <div class="col-md-6">
-      <h2>My Account</h2>
+    <div class="col-md-5">
+
+      <div class="flex flexaccount">
+        <h2>My Account</h2>
+        <a href="/account/edit" class="btn btn-dark coolbutton editbutton">Edit</a>
+      </div>
+
       <hr>
       <div class="row">
         <div class="col-sm-4">
@@ -20,11 +25,11 @@
           </ul>
         </div>
       </div>
-      <a href="/account/edit" class="btn btn-dark coolbutton">Edit</a>
+
     </div>
     {{/with}}
-    <div class="col-md-6">
-      <h2>Your daily summary</h2>
+    <div class="col-md-7">
+      <h1 class="account-title">Your daily summary</h1>
       <hr>
       <h3>{{data.leftCalories}} <span class="format-normal">Calories left</span></h3>
       <p>Objective calories: {{data.objectiveCalories}}</p>

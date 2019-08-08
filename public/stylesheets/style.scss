@@ -1,6 +1,6 @@
 body {
 	font-size: 14px;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Questrial', sans-serif;
 	font-weight: 300;
 	background: white url('/images/foodBG.jpg') no-repeat fixed center;
 	background-size: cover;
@@ -85,15 +85,44 @@ ul {
 	color: #352b25;
 }
 
+.account-title {
+	text-align: center;
+}
+.colgoals {
+	margin-left: 110px;
+}
+.colgoalsh1 {
+	margin-left: 125px;
+}
+
 .coolbutton {
 	background: transparent;
 	color: black;
 	border-radius: 0;
 	padding: 2px 10px;
 }
+
+.colinformation {
+	margin-left: 30px;
+}
+
+.updatebutton {
+	margin-top: 8px;
+}
+
+.editbutton {
+	padding: 2px 10px;
+	width: 80px;
+	height: 30px;
+}
+
+.coolinput {
+	background: transparent;
+}
 .navbar-link {
 	color: #352b25;
 }
+
 .logo {
 	width: 200px;
 	height: 150px;
@@ -116,6 +145,13 @@ ul {
 	border-radius: 0;
 }
 
+.flexaccount {
+	justify-content: space-between;
+}
+
+.flexdata {
+	justify-content: flex-start;
+}
 #myVideo {
 	position: fixed;
 	right: 0;
@@ -127,19 +163,19 @@ ul {
 }
 
 .bg-bar-calories {
-	background-color: rgb(252, 186, 3);
+	background-color: rgba(252, 186, 3, 0.8);
 }
 
 .bg-bar-protein {
-	background-color: rgb(79, 202, 184);
+	background-color: rgba(79, 202, 184, 0.8);
 }
 
 .bg-bar-fats {
-	background-color: rgb(243, 102, 117);
+	background-color: rgba(243, 102, 117, 0.8);
 }
 
 .bg-bar-carbs {
-	background-color: rgb(115, 107, 250);
+	background-color: rgba(115, 107, 250, 0.8);
 }
 
 .progress-bar {
@@ -149,8 +185,8 @@ ul {
 
 .profile-pic {
 	border-radius: 100%;
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 	object-fit: cover;
 	object-position: top;
 }
@@ -158,6 +194,11 @@ ul {
 .format-normal {
 	font-size: 14px;
 	font-weight: 300;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
 }
 
 @keyframes progress {

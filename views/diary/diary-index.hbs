@@ -1,15 +1,18 @@
 <div class="container">
-  <h2>Food Diary</h2>
+  <h1>Food Diary</h1>
   <form action="/diary" method="post">
-    <h4>Your Food Diary for:</h4>
+    <h5>My Food Diary for:</h5>
 
-    <input type="date" name="date" id="date" class="form-control inputs">
-    <button class="btn btn-dark margin-btn coolbutton">Update</button>
+    <div class="flex">
+      <input type="date" name="date" id="date" class="form-control inputs">
+      <button class="btn btn-dark margin-btn coolbutton updatebutton">Update</button>
+    </div>
 
 
   </form>
   <br>
   <h5><strong>Breakfast</strong></h5>
+  <a href='/diary/add'>Add food</a>
   <hr>
   <div class="row">
     {{#each meals.breakfast}}
@@ -24,10 +27,10 @@
     {{/each}}
   </div>
 
-  <a href='/diary/add'>Add food</a>
   <br><br>
 
   <h5><strong>Lunch</strong></h5>
+  <a href='/diary/add'>Add food</a>
   <hr>
   <div class="row">
     {{#each meals.lunch}}
@@ -41,10 +44,11 @@
     {{/each}}
   </div>
 
-  <a href='/diary/add'>Add food</a>
+
   <br><br>
 
   <h5><strong>Dinner</strong></h5>
+  <a href='/diary/add'>Add food</a>
   <hr>
   <div class="row">
     {{#each meals.dinner}}
@@ -59,10 +63,10 @@
     {{/each}}
   </div>
 
-  <a href='/diary/add'>Add food</a>
   <br><br>
 
   <h5><strong>Snacks</strong></h5>
+  <a href='/diary/add'>Add food</a>
   <hr>
 
 
@@ -78,7 +82,6 @@
     {{/each}}
   </div>
 
-  <a href='/diary/add'>Add food</a>
 </div>
 
 
