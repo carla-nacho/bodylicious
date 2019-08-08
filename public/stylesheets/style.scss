@@ -129,8 +129,8 @@ ul {
 }
 
 .icons {
-	height: 50px;
-	width: 50px;
+	height: 40px;
+	width: 40px;
 }
 
 .iconcol {
@@ -151,6 +151,22 @@ ul {
 
 .flexdata {
 	justify-content: flex-start;
+}
+
+.caloriesleft {
+	margin-bottom: 50px;
+}
+
+.objectives {
+	font-weight: bold;
+}
+
+.profilesection {
+	flex-direction: column;
+}
+
+.dataprofile {
+	margin-left: -30px;
 }
 #myVideo {
 	position: fixed;
@@ -185,10 +201,11 @@ ul {
 
 .profile-pic {
 	border-radius: 100%;
-	width: 150px;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	object-fit: cover;
 	object-position: top;
+	opacity: 0.85;
 }
 
 .format-normal {
