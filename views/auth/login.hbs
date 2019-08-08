@@ -5,22 +5,22 @@
       <p>Welcome to {{title}}</p>
 
       <div class="row">
-        <div class="col-6">
+        <div class="col-2">
           <img class="icons" src="/images/notepad.png">
         </div>
 
-        <div class="col-6">
+        <div class="col-10">
           <h5> TRACK FOOD </h5>
           <p>Track your meals our food database + tracking tools.<p>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-6">
+        <div class="col-2">
           <img class="icons" src="/images/graph.png">
         </div>
 
-        <div class="col-6">
+        <div class="col-10">
           <h5> SET A GOAL</h5>
           <p>We match you with a personalized daily calorie budget and weight loss plan.</p>
 
@@ -30,11 +30,11 @@
       </div>
 
       <div class="row">
-        <div class="col-6">
+        <div class="col-2">
           <img class="icons" src="/images/phone.png">
         </div>
 
-        <div class="col-6">
+        <div class="col-10">
           <h5> CONNECT APPS & DEVICES</h5>
           <p>Connect devices, fitness trackers and apps for seamless activity and biometric tracking.<p>
         </div>
@@ -46,12 +46,12 @@
 
       <form action="/login" method="POST" id="form-container">
         <label for="username">Username</label>
-        <input id="username" type="text" name="username" placeholder="Your username" class="form-control">
+        <input id="username" type="text" name="username" placeholder="Your username" class="form-control inputs">
 
         <br><br>
 
         <label for="password">Password</label>
-        <input id="password" type="password" name="password" placeholder="Your password" class="form-control">
+        <input id="password" type="password" name="password" placeholder="Your password" class="form-control inputs">
         <br>
         {{#if message }}
         <div class="error-message">{{ message }}</div>
@@ -59,7 +59,7 @@
 
         <br><br>
 
-        <button class="btn btn-dark">Login</button>
+        <button class="btn btn-dark coolbutton">Login</button>
         <small class="account-message form-text text-muted">
           Don't have an account yet?
           <a href="/signup">Signup</a>

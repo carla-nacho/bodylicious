@@ -8,7 +8,7 @@ class APIHandler {
 
 	getFullList(food) {
 		return this.foods
-			.get(`/search/?format=json&q=${food}&sort=n&max=25&offset=0&api_key=${process.env.API_KEY}`)
+			.get(`/search/?format=json&q=${food}&sort=n&max=25&offset=0&api_key=${process.env.APP_KEY}`)
 			.then(allFoods => {
 				return allFoods.data.list.item
 			})
@@ -18,7 +18,7 @@ class APIHandler {
 	getFoodDetails(id, qty) {
 		const quantity = qty
 		return this.foods
-			.get(`https://api.nal.usda.gov/ndb/V2/reports?ndbno=${id}&type=f&format=json&api_key=${process.env.API_KEY}`)
+			.get(`https://api.nal.usda.gov/ndb/V2/reports?ndbno=${id}&type=f&format=json&api_key=${process.env.APP_KEY}`)
 			.then(foodDetails => {
 				let foodName = foodDetails.data.foods[0].food.desc.name
 				// foodName = foodName.slice(0, foodName.length - 19)

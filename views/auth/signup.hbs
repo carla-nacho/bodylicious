@@ -3,26 +3,27 @@
     <div class="col-md-12">
       <form action="/signup" method="POST" id="form-container" enctype="multipart/form-data">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <h2>Signup</h2>
             <div class="form-group">
               <label for="username">Username</label>
-              <input id="username" type="text" name="username" placeholder="Your username" class="form-control">
+              <input id="username" type="text" name="username" placeholder="Your username" class="form-control inputs">
             </div>
             <br>
             <div class="form-group">
               <label for="password">Password</label>
-              <input id="password" type="password" name="password" placeholder="Your password" class="form-control">
+              <input id="password" type="password" name="password" placeholder="Your password"
+                class="form-control inputs">
             </div>
             <br>
             <div class="form-group">
               <label for="email">Email</label>
-              <input id="email" type="email" name="email" placeholder="Your email" class="form-control">
+              <input id="email" type="email" name="email" placeholder="Your email" class="form-control inputs">
             </div>
             <br>
             <div class="form-group">
               <label for="gender">Gender</label>
-              <select id="gender" type="text" name="gender" placeholder="Your gender" class="form-control">
+              <select id="gender" type="text" name="gender" placeholder="Your gender" class="form-control inputs">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
               </select>
@@ -30,31 +31,34 @@
             <br>
             <div class="form-group">
               <label for="age">Age</label>
-              <input id="age" type="number" name="age" placeholder="Your age" class="form-control">
+              <input id="age" type="number" name="age" placeholder="Your age" class="form-control inputs">
             </div>
             <br>
             <div class="form-group">
               <label for="imgPath">Image Path</label>
-              <input type="file" name="photo" class="form-control">
+              <input type="file" name="photo" class="form-control inputs">
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <h2>Your goals</h2>
             <label for="calories">Calories</label>
-            <input id="calories" type="number" name="calories" placeholder="Your calories" class="form-control">
+            <input id="calories" type="number" name="calories" placeholder="Your calories" class="form-control inputs">
+            <br>
             <br>
 
             <label for="proteins">Proteins</label>
-            <input id="proteins" type="number" name="proteins" placeholder="Your proteins" class="form-control">
+            <input id="proteins" type="number" name="proteins" placeholder="Your proteins" class="form-control inputs">
+            <br>
             <br>
 
             <label for="carbohydrates">Carbohydrates</label>
             <input id="carbohydrates" type="number" name="carbohydrates" placeholder="Your carbohydrates"
-              class="form-control">
+              class="form-control inputs">
+            <br>
             <br>
 
             <label for="fats">Fats</label>
-            <input id="fats" type="number" name="fats" placeholder="Your fats" class="form-control">
+            <input id="fats" type="number" name="fats" placeholder="Your fats" class="form-control inputs">
             <br>
           </div>
         </div>
@@ -64,7 +68,7 @@
 
         <br><br>
 
-        <button class="btn btn-dark">Create account</button>
+        <button class="btn btn-dark coolbutton">Create account</button>
 
         <small class="account-message form-text text-muted">
           Do you already have an account?
