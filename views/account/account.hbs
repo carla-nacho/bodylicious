@@ -40,69 +40,62 @@
       </ul>
     </div>
   </nav>
-
   <div class="container">
     <div class="row">
       {{#with user}}
-      <div class="col-md-5">
-
+      <div class="col-md-4">
         <div class="flex flexaccount">
           <h2>My Account</h2>
           <a href="/account/edit" class="btn btn-dark coolbutton editbutton">Edit</a>
         </div>
-
         <hr>
-        <div class="row">
-          <div class="col-sm-4">
+        <div class="container">
+          <div class="row justify-content-center">
             <img src="{{imgPath}}" alt="Foto de perfil" class="profile-pic">
           </div>
-          <div class="col-sm-8">
-            <ul>
-              <li>Username: {{username}}</li>
-              <br>
-              <li>E-Mail: {{email}}</li>
-              <br>
-              <li>Age: {{age}}</li>
-              <br>
-              <li>Gender: {{gender}}</li>
+          <br><br>
+          <div class="row justify-content-center">
+            <ul class="dataprofile">
+              <li class="objectives">USERNAME: {{username}}</li>
+              <li class="objectives">E-MAIL: {{email}}</li>
+              <li class="objectives">AGE: {{age}}</li>
+              <li class="objectives">GENDER: {{gender}}</li>
             </ul>
           </div>
         </div>
-
       </div>
       {{/with}}
-      <div class="col-md-7">
+      <div class="col-md-8">
         <h1 class="account-title">Your daily summary</h1>
         <hr>
-        <h3>{{data.leftCalories}} <span class="format-normal">Calories left</span></h3>
-        <p>Objective calories: {{data.objectiveCalories}}</p>
+        <h3 class="caloriesleft"><strong> {{data.leftCalories}} Calories left</strong></h3>
+        <p><span class="objectives">Objective calories:</span>{{data.objectiveCalories}}</p>
         <div class="progress">
           <div class="progress-bar bg-bar-calories" role="progressbar" aria-valuenow="100" aria-valuemin="0"
             aria-valuemax="2000" style="max-width:{{data.percentageCalories}}%">
           </div>
         </div>
         <br>
-        <p>Left proteins: {{data.leftProteins}}g</p>
+        <p><span class="objectives">Left proteins:</span> {{data.leftProteins}}g</p>
         <div class="progress">
           <div class="progress-bar bg-bar-protein" role="progressbar" aria-valuenow="100" aria-valuemin="0"
             aria-valuemax="2000" style="max-width:{{data.percentageProtein}}%">
           </div>
         </div>
         <br>
-        <p>Left fats: {{data.leftFats}}g</p>
+        <p><span class="objectives">Left fats:</span> {{data.leftFats}}g</p>
         <div class="progress">
           <div class="progress-bar bg-bar-fats" role="progressbar" aria-valuenow="100" aria-valuemin="0"
             aria-valuemax="2000" style="max-width:{{data.percentageFats}}%">
           </div>
         </div>
         <br>
-        <p>Left carbs: {{data.leftCarbs}}g</p>
+        <p><span class="objectives">Left carbs:</span> {{data.leftCarbs}}g</p>
         <div class="progress">
           <div class="progress-bar bg-bar-carbs" role="progressbar" aria-valuenow="100" aria-valuemin="0"
             aria-valuemax="2000" style="max-width:{{data.percentageCarbs}}%">
           </div>
         </div>
-
       </div>
     </div>
   </div>

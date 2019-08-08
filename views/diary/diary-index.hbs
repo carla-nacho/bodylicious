@@ -41,6 +41,7 @@
 </nav>
 <div class="container">
   <h1>Food Diary</h1>
+  <br>
   <form action="/diary" method="post">
     <h5>My Food Diary for:</h5>
 
@@ -48,11 +49,11 @@
       <input type="date" name="date" id="date" class="form-control inputs">
       <button class="btn btn-dark margin-btn coolbutton updatebutton">Update</button>
     </div>
-
+    <br>
 
   </form>
   <br>
-  <h5><strong>Breakfast</strong></h5>
+  <h5 class="objectives">Breakfast</h5>
   <a href='/diary/add'>Add food</a>
   <hr>
   <div class="row">
@@ -62,15 +63,17 @@
     </div>
 
     <div class="col-md-8">
-      <p>Calories: {{foodNutrients.0.value}}kcal Proteins: {{foodNutrients.1.value}}g Fats: {{foodNutrients.2.value}}g
-        Carbohydrates: {{foodNutrients.3.value}}g</p>
+      <p><span class="objectives">Calories:</span> {{foodNutrients.0.value}}kcal <span
+          class="objectives">Proteins:</span> {{foodNutrients.1.value}}g
+        <span class="objectives">Fats:</span> {{foodNutrients.2.value}}g
+        <span class="objectives">Carbohydrates:</span> {{foodNutrients.3.value}}g</p>
     </div>
     {{/each}}
   </div>
 
   <br><br>
 
-  <h5><strong>Lunch</strong></h5>
+  <h5 class="objectives">Lunch</h5>
   <a href='/diary/add'>Add food</a>
   <hr>
   <div class="row">
@@ -79,8 +82,11 @@
       <p>{{foodName}}</p>
     </div>
     <div class="col-md-8">
-      <p>Calories: {{foodNutrients.0.value}}kcal Proteins: {{foodNutrients.1.value}}g Fats: {{foodNutrients.2.value}}g
-        Carbohydrates: {{foodNutrients.3.value}}g</p>
+      <p><span class="objectives">Calories:</span> {{foodNutrients.0.value}}kcal
+        <span class="objectives">Proteins: </span> {{foodNutrients.1.value}}g
+        <span class="objectives">Fats:</span> {{foodNutrients.2.value}}g
+        <span class="objectives">Carbohydrates:</span> {{foodNutrients.3.value}}g</p>
+
     </div>
     {{/each}}
   </div>
@@ -88,7 +94,7 @@
 
   <br><br>
 
-  <h5><strong>Dinner</strong></h5>
+  <h5 class="objectives">Dinner</h5>
   <a href='/diary/add'>Add food</a>
   <hr>
   <div class="row">
@@ -98,15 +104,17 @@
     </div>
 
     <div class="col-md-8">
-      <p>Calories: {{foodNutrients.0.value}}kcal Proteins: {{foodNutrients.1.value}}g Fats: {{foodNutrients.2.value}}g
-        Carbohydrates: {{foodNutrients.3.value}}g</p>
+      <p><span class="objectives">Calories:</span> {{foodNutrients.0.value}}kcal
+        <span class="objectives">Proteins:</span> {{foodNutrients.1.value}}g
+        <span class="objectives">Fats:</span> {{foodNutrients.2.value}}g
+        <span class="objectives">Carbohydrates: </span> {{foodNutrients.3.value}}g</p>
     </div>
     {{/each}}
   </div>
 
   <br><br>
 
-  <h5><strong>Snacks</strong></h5>
+  <h5 class="objectives">Snacks</h5>
   <a href='/diary/add'>Add food</a>
   <hr>
 
@@ -117,8 +125,10 @@
       <p>{{foodName}}</p>
     </div>
     <div class="col-md-8">
-      <p>Calories: {{foodNutrients.0.value}}kcal Proteins: {{foodNutrients.1.value}}g Fats: {{foodNutrients.2.value}}g
-        Carbohydrates: {{foodNutrients.3.value}}g</p>
+      <p><span class="objectives">Calories:</span> {{foodNutrients.0.value}}kcal
+        <span class="objectives">Proteins:</span> {{foodNutrients.1.value}}g
+        <span class="objectives">Fats:</span> {{foodNutrients.2.value}}g
+        <span class="objectives">Carbohydrates:</span> {{foodNutrients.3.value}}g</p>
     </div>
     {{/each}}
   </div>
