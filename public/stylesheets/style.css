@@ -5,9 +5,6 @@ body {
   background: white url("/images/foody.jpg") no-repeat fixed center;
   background-size: cover; }
 
-main {
-  padding: 40px 0; }
-
 h2 {
   font-weight: 300; }
 
@@ -145,6 +142,11 @@ ul {
 
 .bg-bar-carbs {
   background-color: rgba(115, 107, 250, 0.8); }
+
+.bg-bn {
+  background: white url("/images/foodyByN.jpg") no-repeat fixed center;
+  background-size: cover;
+  height: 100vh; }
 
 .progress-bar {
   width: 0;
