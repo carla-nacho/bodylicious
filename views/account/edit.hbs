@@ -46,17 +46,17 @@
       <form action="/account/edit" method="post">
         <div class="form-group">
           <label for="username">Username</label>
-          <input id="username" type="text" name="username" value="{{user.username}}" class="form-control">
+          <input id="username" type="text" name="username" value="{{user.username}}" class="form-control inputs">
         </div>
         <br>
         <div class="form-group">
           <label for="email">Email</label>
-          <input id="email" type="email" name="email" value="{{user.email}}" class="form-control">
+          <input id="email" type="email" name="email" value="{{user.email}}" class="form-control inputs">
         </div>
         <br>
         <div class="form-group">
           <label for="gender">Gender</label>
-          <select id="gender" type="text" name="gender" value="{{user.gender}}" class="form-control">
+          <select id="gender" type="text" name="gender" value="{{user.gender}}" class="form-control inputs">
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
@@ -64,13 +64,13 @@
         <br>
         <div class="form-group">
           <label for="age">Age</label>
-          <input id="age" type="number" name="age" value="{{user.age}}" class="form-control">
+          <input id="age" type="number" name="age" value="{{user.age}}" class="form-control inputs">
         </div>
         <br>
         {{#if message}}
         <p>{{message}}</p>
         {{/if}}
-        <button class="btn btn-dark">Edit</button>
+        <button class="btn btn-dark coolbutton centerlogin">Edit</button>
       </form>
     </div>
   </div>

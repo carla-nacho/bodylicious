@@ -69,11 +69,21 @@ ul {
 .account-title {
   text-align: center; }
 
+.h2login {
+  margin-left: 45px; }
+
 .colgoals {
   margin-left: 110px; }
 
 .colgoalsh1 {
   margin-left: 125px; }
+
+.centerlogin {
+  margin-left: 70px;
+  margin-bottom: 20px; }
+
+.logintitle {
+  margin-top: 40px; }
 
 .coolbutton {
   background: transparent;
