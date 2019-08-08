@@ -3,6 +3,7 @@ const router = express.Router()
 const User = require('../models/User')
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login')
 const API = require('../APIHandler')
+const uploadCloud = require('../configs/cloudinary.config')
 
 /* GET home page */
 router.get('/', ensureLoggedIn(), (req, res, next) => {
@@ -100,6 +101,22 @@ router.post('/my-goals', ensureLoggedIn(), (req, res, next) => {
 			.then(() => res.redirect('/account/my-goals'))
 			.catch(err => console.log('Ha habido un error: ', err))
 	}
+})
+
+router.get('/edit', ensureLoggedIn(), (req, res, next) => {
+	const userId = req.user.id
+	User.findById(userId)
+		.then(theWholeUser => res.render('account/edit', { user: theWholeUser }))
+		.catch(err => console.log('Ha habido un error: ', err))
+})
+
+router.post('/edit', [uploadCloud.single('photo2'), ensureLoggedIn()], (req, res, next) => {
+	const userId = req.user.id
+	const { username, email, gender, age } = req.body
+	// const imgPath = req.file.url
+	User.findByIdAndUpdate(userId, { $set: { username, email, gender, age } })
+		.then(() => res.redirect('/account'))
+		.catch(err => console.log('Ha habido un error: ', err))
 })
 
 module.exports = router
