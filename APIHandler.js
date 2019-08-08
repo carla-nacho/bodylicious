@@ -31,6 +31,7 @@ class APIHandler {
 				foodNutrients[1].value = (quantity * foodNutrients[1].value) / 100
 				foodNutrients[2].value = (quantity * foodNutrients[2].value) / 100
 				foodNutrients[3].value = (quantity * foodNutrients[3].value) / 100
+
 				return { foodName, foodNutrients, quantity }
 			})
 			.catch(err => console.log(err))
