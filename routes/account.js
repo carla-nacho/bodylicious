@@ -113,7 +113,6 @@ router.get('/edit', ensureLoggedIn(), (req, res, next) => {
 router.post('/edit', [uploadCloud.single('photo2'), ensureLoggedIn()], (req, res, next) => {
 	const userId = req.user.id
 	const { username, email, gender, age } = req.body
-	// const imgPath = req.file.url
 	User.findByIdAndUpdate(userId, { $set: { username, email, gender, age } })
 		.then(() => res.redirect('/account'))
 		.catch(err => console.log('Ha habido un error: ', err))
