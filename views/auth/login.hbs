@@ -82,13 +82,13 @@
     </div>
 
 
-    <div class="col-md-8">
+    <div class="col-md-8 formlogin">
       <h2 class="h2login">Login</h2>
       <form action="/login" method="POST" id="form-container" class="logintitle">
         <label for="username">Username</label>
         <input id="username" type="text" name="username" placeholder="Your username" class="form-control inputs">
 
-        <br><br>
+        <br>
 
         <label for="password">Password</label>
         <input id="password" type="password" name="password" placeholder="Your password" class="form-control inputs">
@@ -97,7 +97,7 @@
         <div class="error-message">{{ message }}</div>
         {{/if}}
 
-        <br><br>
+        <br>
 
         <button class="btn btn-dark coolbutton centerlogin">Login</button>
         <small class="account-message form-text text-muted">

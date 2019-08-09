@@ -75,7 +75,11 @@ ul {
   text-align: center; }
 
 .h2login {
-  margin-left: 45px; }
+  margin-left: 70px;
+  margin-top: 120px; }
+
+.formlogin {
+  margin-top: -5px; }
 
 .colgoals {
   margin-left: 110px; }
@@ -84,11 +88,14 @@ ul {
   margin-left: 125px; }
 
 .centerlogin {
-  margin-left: 70px;
-  margin-bottom: 20px; }
+  width: 200px; }
 
 .logintitle {
-  margin-top: 40px; }
+  margin-top: 15px;
+  margin-left: 20px; }
+
+.updatebutton {
+  width: 200px; }
 
 .coolbutton {
   background: transparent;
