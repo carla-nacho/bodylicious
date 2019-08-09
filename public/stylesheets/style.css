@@ -20,6 +20,11 @@ a {
 ul {
   list-style: none; }
 
+.diaryfoods {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px; }
+
 .margin-btn {
   margin: 10px 0; }
 
@@ -126,6 +131,17 @@ ul {
   border-bottom: 1px solid #000000;
   border-radius: 0; }
 
+.quantity {
+  width: 150px; }
+
+.quantityinput {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center; }
+
+.foodnameinput {
+  width: 600px; }
+
 .flexaccount {
   justify-content: space-between; }
 
@@ -133,7 +149,10 @@ ul {
   justify-content: flex-start; }
 
 .caloriesleft {
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Lato', sans-serif; }
 
 .objectives {
   font-weight: bold; }
@@ -181,7 +200,7 @@ ul {
   height: 200px;
   object-fit: cover;
   object-position: top;
-  opacity: 0.85; }
+  opacity: 0.8; }
 
 .format-normal {
   font-size: 14px;

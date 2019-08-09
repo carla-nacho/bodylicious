@@ -72,10 +72,11 @@
           <td scope="row"><input id="foodId" name="foodId" type="text" class="list-btn display-none" value="{{ndbno}}"
               readonly>
           </td>
-          <td class="td"><button class="list-btn">{{name}}</button></td>
-          <td><input type="number" value="0" id="quantity" name="quantity" class="form-control coolinput"></td>
+          <td class="td foodnameinput"><button class="list-btn">{{name}}</button></td>
+          <td class="quantity"><input type="number" value="0" id="quantity" name="quantity"
+              class="form-control coolinput quantityinput"></td>
           <td>
-            <select name="meals" id="meals" class="form-control coolinput">
+            <select name="meals" id="meals" class="form-control coolinput quantityinput">
               <option value="Breakfast">Breakfast</option>
               <option value="Lunch">Lunch</option>
               <option value="Dinner">Dinner</option>
