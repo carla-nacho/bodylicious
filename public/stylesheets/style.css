@@ -216,4 +216,16 @@ ul {
   to {
     width: 100%; } }
 
+@media screen and (max-width: 1100px) {
+  #bodylicious {
+    font-size: 35px; }
+  #start-btn {
+    width: 150px;
+    font-size: 10px;
+    margin-left: 10px; }
+  #video-responsive {
+    position: fixed;
+    top: 20px;
+    left: 60px; } }
+
 /*# sourceMappingURL=style.css.map */
